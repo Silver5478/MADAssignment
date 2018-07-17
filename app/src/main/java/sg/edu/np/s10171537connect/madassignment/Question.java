@@ -4,7 +4,6 @@ public class Question {
 
     private String Question;
     private String QType;
-    private String Qimage;
     private String QCanswer;
 
 
@@ -24,13 +23,7 @@ public class Question {
         return QType;
     }
 
-    public String getQimage() {
-        return Qimage;
-    }
 
-    public void setQimage(String qimage) {
-        Qimage = qimage;
-    }
 
     public String getQCanswer() {
         return QCanswer;

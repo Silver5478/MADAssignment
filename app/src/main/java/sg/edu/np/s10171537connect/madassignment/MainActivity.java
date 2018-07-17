@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Question TestQ = null;
         TestQ.setQuestion("Which year did singapore obtain independence");
-        TestQ.setQimage("");
         TestQ.setQType("History");
         TestQ.setQCanswer("1965");
 
