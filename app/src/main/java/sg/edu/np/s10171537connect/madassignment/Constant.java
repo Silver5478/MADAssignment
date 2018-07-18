@@ -5,4 +5,5 @@ public class Constant {
     static String gamemode;
     static boolean Online;
     static int numPlayer;
+    static int numQuestion;
 }
