@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".start_gameActivity" />
+        <activity android:name=".question_list_catergories" />
+        <activity android:name=".question_select_onlinestatusActivity" />
+        <activity android:name=".select_number_of_playerActivity" />
+        <activity android:name=".select_number_of_questionActivity"></activity>
     </application>
 
 </manifest>
