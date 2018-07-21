@@ -18,4 +18,9 @@ public class start_gameActivity extends AppCompatActivity {
         Intent in = new Intent(this, question_list_catergories.class);
         startActivity(in);
     }
+    public void on_custom_click(View v){
+        Constant.gamemode = "Custom";
+        Intent in = new Intent(this, question_select_onlinestatusActivity.class);
+        startActivity(in);
+    }
 }

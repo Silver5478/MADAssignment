@@ -1,6 +1,6 @@
 package sg.edu.np.s10171537connect.madassignment;
 
-import java.awt.List;
+import java.util.List;
 
 public class Player {
     private List PlayerList;
