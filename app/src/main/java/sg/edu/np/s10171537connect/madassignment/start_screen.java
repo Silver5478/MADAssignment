@@ -16,6 +16,9 @@ public class start_screen extends AppCompatActivity {
         TestQ.setQType("History");
         TestQ.setQCanswer("1965");
 
+        //Test
+        Constant.PlayerList.add(Constant.Player1);
+
     }
     public void on_start_game_click(View v){
         Intent in = new Intent(this, start_gameActivity.class);
