@@ -7,13 +7,14 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/Ready_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
+        android:onClick="on_ready_next_click"
         android:text="Ready"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="181dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintBottom_toTopOf="@+id/Ready_next_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
