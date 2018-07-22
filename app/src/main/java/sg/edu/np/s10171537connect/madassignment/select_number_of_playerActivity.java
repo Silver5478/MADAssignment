@@ -13,8 +13,20 @@ public class select_number_of_playerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_number_of_players);
     }
-    public void on_num_player_next_click(View v){
-        Intent in = new Intent(this,select_number_of_questionActivity.class);
+    public void on_player2_click(View v){
+        Constant.numPlayer = 2;
+        Intent in = new Intent(this,question_ready.class);
         startActivity(in);
     }
+    public void on_player3_click(View v){
+        Constant.numPlayer = 3;
+        Intent in = new Intent(this,question_ready.class);
+        startActivity(in);
+    }
+    public void on_player4_click(View v){
+        Constant.numPlayer = 4;
+        Intent in = new Intent(this,question_ready.class);
+        startActivity(in);
+    }
+
 }

@@ -14,12 +14,13 @@ public class question_select_onlinestatusActivity extends AppCompatActivity {
     }
     public void on_hotseat_click(View v){
         Constant.Online = false;
-    }
-    public void on_online_click(View v){
-        Constant.Online = true;
-    }
-    public void on_online_status_next_click(View v){
         Intent in = new Intent(this,select_number_of_playerActivity.class);
         startActivity(in);
     }
+    public void on_online_click(View v){
+        Constant.Online = true;
+        Intent in = new Intent(this,select_number_of_playerActivity.class);
+        startActivity(in);
+    }
+
 }
