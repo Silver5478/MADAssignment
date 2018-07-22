@@ -1,5 +1,6 @@
 package sg.edu.np.s10171537connect.madassignment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Constant {
@@ -10,4 +11,6 @@ public class Constant {
     //static int numQuestion;
     static List QFanswerlist;
     static Question question;
+    static List<Player> PlayerList;
+    PlayerList = new ArrayList<>{};
 }
