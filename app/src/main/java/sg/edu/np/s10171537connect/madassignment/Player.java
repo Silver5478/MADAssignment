@@ -1,6 +1,6 @@
 package sg.edu.np.s10171537connect.madassignment;
 
-import java.awt.List;
+import java.util.List;
 
 public class Player {
     private List PlayerList;
@@ -8,6 +8,6 @@ public class Player {
     private String PlayerScore;
     private String SelectedAnswer;
 
-    //PlayerID = new (PlayerName,PlayerScore,SelectedAnswer)
+    //PlayerID player1 = new PlayerID(PlayerName,PlayerScore,SelectedAnswer)
 
 }
