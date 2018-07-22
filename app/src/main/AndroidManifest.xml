@@ -20,7 +20,6 @@
         <activity android:name=".question_list_catergories" />
         <activity android:name=".question_select_onlinestatusActivity" />
         <activity android:name=".select_number_of_playerActivity" />
-        <activity android:name=".select_number_of_questionActivity" />
         <activity
             android:name=".question_ready"
             android:label="@string/title_activity_question_ready"
