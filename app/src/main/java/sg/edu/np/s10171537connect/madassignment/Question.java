@@ -41,4 +41,6 @@ public class Question {
         QCanswer = qCanswer;
 
     }
+
+    public Question() {}
 }
