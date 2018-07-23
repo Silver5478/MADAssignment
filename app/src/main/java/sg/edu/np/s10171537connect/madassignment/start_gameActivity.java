@@ -15,12 +15,14 @@ public class start_gameActivity extends AppCompatActivity {
     }
     public void on_normal_click(View v){
         Constant.gamemode = "Normal";
+        Constant.numQuestion = 10;
         Intent in = new Intent(this, question_list_catergories.class);
         startActivity(in);
     }
     public void on_custom_click(View v){
         Constant.gamemode = "Custom";
         Intent in = new Intent(this, question_select_onlinestatusActivity.class);
+        Constant.numQuestion = 10;
         startActivity(in);
     }
 }

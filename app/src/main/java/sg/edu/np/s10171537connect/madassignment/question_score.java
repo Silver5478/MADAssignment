@@ -14,7 +14,14 @@ public class question_score extends AppCompatActivity {
         setContentView(R.layout.question_score);
     }
     public void on_show_score_next_click(View v){
-        Intent in = new Intent(this,question_final_score.class);
+        if(Constant.numQuestion == 0) {
+            Intent in = new Intent(this, question_final_score.class);
+            startActivity(in);
+        }
+        else{
+            Constant.numQuestion -= 1;
+        Intent in = new Intent(this, enter_fake_answer.class);
         startActivity(in);
+        }
     }
 }

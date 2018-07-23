@@ -1,5 +1,7 @@
 package sg.edu.np.s10171537connect.madassignment;
 
+import java.security.PublicKey;
+
 public class Question {
 
     private String Question;
@@ -31,5 +33,12 @@ public class Question {
 
     public void setQCanswer(String QCanswer) {
         this.QCanswer = QCanswer;
+    }
+
+    public Question(String question, String qType, String qCanswer){
+        Question = question;
+        QType = qType;
+        QCanswer = qCanswer;
+
     }
 }

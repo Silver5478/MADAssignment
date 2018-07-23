@@ -16,8 +16,11 @@ public class start_screen extends AppCompatActivity {
         TestQ.setQType("History");
         TestQ.setQCanswer("1965");
 
+        Constant.AddData();
+        Constant.PlayerList.get(0);
+
         //Test
-        Constant.PlayerList.add(Constant.Player1);
+        //Constant.PlayerList.add(Constant.Player1);
 
     }
     public void on_start_game_click(View v){

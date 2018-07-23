@@ -7,12 +7,12 @@ public class Constant {
     static String gamemode;
     static boolean Online;
     static int numPlayer;
-    //static int numQuestion;
+    static int numQuestion;
     static List QFanswerlist;
     static Question question;
     static List PlayerList;
 
-    public void AddData() {
+    static public void AddData() {
         Player Player1 = new Player(1, "player1", 0, " ");
         Player Player2 = new Player(2, "player2", 0, " ");
         Player Player3 = new Player(3, "player3", 0, " ");
