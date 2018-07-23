@@ -8,15 +8,20 @@ import android.widget.EditText;
 
 public class enter_fake_answer extends AppCompatActivity {
     EditText fanswer;
+    int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_enter_fake_answer);
         fanswer = findViewById(R.id.fake_answer);
+        count = 1;
     }
     public void on_Fake_answer_next_click(View v){
-        Constant.QFanswerlist.add(fanswer.getText().toString());
-        Intent in = new Intent(this,show_answer.class);
-        startActivity(in);
+        if(count == Constant.numPlayer ) {
+            Constant.QFanswerlist.add(fanswer.getText().toString());
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
+        }
+        count += 1;
     }
 }

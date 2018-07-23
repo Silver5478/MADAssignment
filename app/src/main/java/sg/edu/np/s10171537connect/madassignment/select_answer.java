@@ -15,10 +15,12 @@ public class select_answer extends AppCompatActivity {
     Button answer4;
     Button answer5;
     List answerList;
+    int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_select_answer);
+        count = 1;
         answer1 = findViewById(R.id.answer1);
         answer2 = findViewById(R.id.answer2);
         answer3 = findViewById(R.id.answer3);
@@ -28,14 +30,21 @@ public class select_answer extends AppCompatActivity {
         answerList.add(Constant.question.getQCanswer());
 
 
+
         answer1.setText((Integer) answerList.get(0));
         answer2.setText((Integer) answerList.get(1));
         answer3.setText((Integer) answerList.get(2));
         answer4.setText((Integer) answerList.get(3));
         answer5.setText((Integer) answerList.get(4));
     }
-    public void on_select_answer_next_click(View v){
-        Intent in = new Intent(this,show_answer.class);
-        startActivity(in);
+    public void on_select_answer1_click(View v){
+        if(count == Constant.numPlayer ) {
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
+        }
+        else {
+            count += 1;
+        }
+        }
     }
-}
+
