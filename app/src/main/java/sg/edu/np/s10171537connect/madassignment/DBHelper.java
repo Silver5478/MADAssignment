@@ -34,7 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addProduct(Question question) {
+    public void addQuestion(Question question) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_QUESTION, question.getQuestion());
         values.put(COLUMN_ANSWER, question.getQCanswer());
@@ -44,7 +44,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void updateProduct(Question question) {
+    public void updateQuestion(Question question) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_QUESTION, question.getQuestion());
         values.put(COLUMN_ANSWER, question.getQCanswer());
@@ -73,27 +73,13 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         db.close();
         return q;
-    } //findProduct
+    }
 
     public boolean deleteQuestion(String question) {
-        boolean result = false;
-        String query = "SELECT * FROM " + TABLE_QUESTIONS + " WHERE "
-                + COLUMN_QUESTION + " = \""
-                + question + "\"";
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-        Question q = new Question();
 
-        if (cursor.moveToFirst()) {
-            //q.setId(Integer.parseInt(cursor.getString(0)));
-           // db.delete(TABLE_QUESTIONS, COLUMN_ID + " = ?",
-           //         new String[] { String.valueOf(q.getId()) });
-            cursor.close();
-            result = true;
-        }
-        db.close();
-        return result;
+        return db.delete(TABLE_QUESTIONS, COLUMN_QUESTION + " = ?", new String[] { question }) !=0 ;
 
-    } //deleteProduct
+    }
 
 }
