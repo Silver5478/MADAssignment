@@ -11,6 +11,7 @@ public class Constant {
     static List QFanswerlist;
     static Question question;
     static List PlayerList;
+    static String catergory;
 
     static public void AddData() {
         Player Player1 = new Player(1, "player1", 0, " ");

@@ -28,7 +28,8 @@
         <activity android:name=".select_answer" />
         <activity android:name=".show_answer" />
         <activity android:name=".question_score" />
-        <activity android:name=".Enter_question_custom"></activity>
+        <activity android:name=".Enter_question_custom" />
+        <activity android:name=".ScoreTaskViewHolder"></activity>
     </application>
 
 </manifest>
