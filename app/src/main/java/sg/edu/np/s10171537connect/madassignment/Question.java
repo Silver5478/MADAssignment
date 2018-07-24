@@ -7,7 +7,6 @@ public class Question {
     private String Question;
     private String QType;
     private String QCanswer;
-    private int QId;
 
 
 
