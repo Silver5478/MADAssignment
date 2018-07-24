@@ -18,10 +18,10 @@ public class Constant {
         Player Player3 = new Player(3, "player3", 0, " ");
         Player Player4 = new Player(4, "player4", 0, " ");
 
-        PlayerList.add(Player1);
+/*        PlayerList.add(Player1);
         PlayerList.add(Player2);
         PlayerList.add(Player3);
-        PlayerList.add(Player4);
+        PlayerList.add(Player4);*/
     }
 }
 
