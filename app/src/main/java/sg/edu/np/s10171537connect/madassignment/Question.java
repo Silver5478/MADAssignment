@@ -7,6 +7,7 @@ public class Question {
     private String Question;
     private String QType;
     private String QCanswer;
+    private int QId;
 
 
 
@@ -34,6 +35,10 @@ public class Question {
     public void setQCanswer(String QCanswer) {
         this.QCanswer = QCanswer;
     }
+
+    public void setId(int id) { QId = id; }
+
+    public int getId() { return QId; }
 
     public Question(String question, String qType, String qCanswer){
         Question = question;

@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
-    //private static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "questionDB.db";
     public static final String TABLE_QUESTIONS = "questions";
     public static final String COLUMN_ID = "id";
@@ -15,14 +14,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ANSWER = "answer";
     public static final String COLUMN_TYPE = "type";
 
-    public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DBHelper(Context context, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_QUESTIONS
-                + " (" + COLUMN_ID + " INTEGER PRIMARY KEY, "
+                + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_QUESTION + " TEXT, "
                 + COLUMN_ANSWER + " TEXT, "
                 + COLUMN_TYPE + " TEXT)");
@@ -63,7 +62,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Question q = new Question();
 
         if (cursor.moveToFirst()) {
-            //q.setId(Integer.parseInt(cursor.getString(0)));
+            q.setId(Integer.parseInt(cursor.getString(0)));
             q.setQuestion(cursor.getString(1));
             q.setQCanswer(cursor.getString(2));
             q.setQType(cursor.getString(3));
@@ -75,11 +74,20 @@ public class DBHelper extends SQLiteOpenHelper {
         return q;
     }
 
-    public boolean deleteQuestion(String question) {
+    public boolean deleteQuestion(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        return db.delete(TABLE_QUESTIONS, COLUMN_QUESTION + " = ?", new String[] { question }) !=0 ;
+        return db.delete(TABLE_QUESTIONS, COLUMN_ID + " = ", new String[] { id + "" }) !=0 ;
 
     }
 
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_QUESTIONS,null);
+        return res;
+    }
+
+    public Boolean dbEmpty() {
+        return !getAllData().moveToFirst();
+    }
 }
