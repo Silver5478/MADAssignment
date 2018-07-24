@@ -39,12 +39,58 @@ public class select_answer extends AppCompatActivity {
     }
     public void on_select_answer1_click(View v){
         if(count == Constant.numPlayer ) {
+            Player p = Constant.PlayerList.get(count - 1);
+            p.setSelectedAnswer(answer1.getText().toString());
             Intent in = new Intent(this, show_answer.class);
             startActivity(in);
         }
         else {
             count += 1;
         }
+    }
+    public void on_select_answer2_click(View v){
+        if(count == Constant.numPlayer ) {
+            Player p = Constant.PlayerList.get(count - 1);
+            p.setSelectedAnswer(answer1.getText().toString());
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
         }
+        else {
+            count += 1;
+        }
+    }
+    public void on_select_answer3_click(View v){
+        if(count == Constant.numPlayer ) {
+            Player p = Constant.PlayerList.get(count - 1);
+            p.setSelectedAnswer(answer1.getText().toString());
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
+        }
+        else {
+            count += 1;
+        }
+    }
+    public void on_select_answer4_click(View v){
+        if(count == Constant.numPlayer ) {
+            Player p = Constant.PlayerList.get(count - 1);
+            p.setSelectedAnswer(answer1.getText().toString());
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
+        }
+        else {
+            count += 1;
+        }
+    }
+    public void on_select_answer5_click(View v){
+        if(count == Constant.numPlayer ) {
+            Player p = Constant.PlayerList.get(count - 1);
+            p.setSelectedAnswer(answer1.getText().toString());
+            Intent in = new Intent(this, show_answer.class);
+            startActivity(in);
+        }
+        else {
+            count += 1;
+        }
+    }
     }
 
