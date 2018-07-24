@@ -16,6 +16,7 @@ public class Enter_question_custom extends AppCompatActivity {
         canswer = (EditText)findViewById(R.id.custom_answer);
         cquestion = (EditText)findViewById(R.id.custom_question);
     }
+
     public void on_question_custom_next_click(View v){
         Constant.question.setQCanswer(canswer.getText().toString());
         Constant.question.setQuestion(cquestion.getText().toString());

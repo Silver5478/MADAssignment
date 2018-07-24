@@ -10,7 +10,7 @@ public class Constant {
     static int numQuestion;
     static List QFanswerlist;
     static Question question;
-    static List PlayerList;
+    static List<Player> PlayerList;
     static String catergory;
 
     static public void AddData() {

@@ -15,17 +15,17 @@ public class select_number_of_playerActivity extends AppCompatActivity {
     }
     public void on_player2_click(View v){
         Constant.numPlayer = 2;
-        Intent in = new Intent(this,question_ready.class);
+        Intent in = new Intent(this,Enter_playername.class);
         startActivity(in);
     }
     public void on_player3_click(View v){
         Constant.numPlayer = 3;
-        Intent in = new Intent(this,question_ready.class);
+        Intent in = new Intent(this,Enter_playername.class);
         startActivity(in);
     }
     public void on_player4_click(View v){
         Constant.numPlayer = 4;
-        Intent in = new Intent(this,question_ready.class);
+        Intent in = new Intent(this,Enter_playername.class);
         startActivity(in);
     }
 
