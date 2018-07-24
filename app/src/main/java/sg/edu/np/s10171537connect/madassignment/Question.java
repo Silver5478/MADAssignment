@@ -7,8 +7,7 @@ public class Question {
     private String Question;
     private String QType;
     private String QCanswer;
-
-
+    private Integer QId;
 
     public void setQuestion(String question) {
         Question = question;
