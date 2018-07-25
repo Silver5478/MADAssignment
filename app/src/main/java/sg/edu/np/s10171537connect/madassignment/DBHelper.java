@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "questionDB.db";
     public static final String TABLE_QUESTIONS = "questions";
@@ -97,6 +100,23 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         db.close();
         return q;
+    }
+
+    public List<String> getListOfCategories() {
+        List<String> list = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT DISTINCT " + COLUMN_TYPE + " FROM " + TABLE_QUESTIONS, null);
+
+        if (!cursor.moveToFirst())
+            return list;
+
+        list.add(cursor.getString(0));
+
+        while (cursor.moveToNext()) {
+            list.add(cursor.getString(0));
+        }
+
+        return list;
     }
 
     public boolean deleteQuestion(int id) {

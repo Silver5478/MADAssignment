@@ -27,11 +27,12 @@ public class start_screen extends AppCompatActivity {
 
         if (dbHandler.dbEmpty()) {
             dbHandler.addQuestion(TestQ);
-            dbHandler.addQuestion(new Question("question", "answer", "type"));
-            dbHandler.addQuestion(new Question("question", "answer", "type"));
-            dbHandler.addQuestion(new Question("question", "answer", "type"));
-            dbHandler.addQuestion(new Question("question", "answer", "type"));
-            dbHandler.addQuestion(new Question("question", "answer", "type"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("question", "type", "answer"));
 
         }
         TextView textView = (TextView)findViewById(R.id.textView);
