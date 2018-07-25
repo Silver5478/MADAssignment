@@ -33,6 +33,11 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void deleteAll() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_QUESTIONS);
+    }
+
     public void addQuestion(Question question) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_QUESTION, question.getQuestion());
@@ -53,14 +58,34 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public Question findQuestion(String question) {
+    public Question findQuestion(String type) {
         String query = "SELECT * FROM " + TABLE_QUESTIONS + " WHERE "
-                + COLUMN_QUESTION
-                + " = \"" + question + "\"";
+                + COLUMN_TYPE
+                + " = \"" + type + "\"";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         Question q = new Question();
 
+        if (cursor.moveToFirst()) {
+            q.setId(Integer.parseInt(cursor.getString(0)));
+            q.setQuestion(cursor.getString(1));
+            q.setQCanswer(cursor.getString(2));
+            q.setQType(cursor.getString(3));
+            cursor.close();
+        } else {
+            q = null;
+        }
+        db.close();
+        return q;
+    }
+
+    public Question getRandomQuestionByType(String type) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_QUESTIONS + " WHERE "
+                + COLUMN_TYPE
+                + " = \"" + type + "\" ORDER BY RANDOM() LIMIT 1", null);
+
+        Question q = new Question();
         if (cursor.moveToFirst()) {
             q.setId(Integer.parseInt(cursor.getString(0)));
             q.setQuestion(cursor.getString(1));

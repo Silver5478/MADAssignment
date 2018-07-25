@@ -39,12 +39,12 @@ public class Question {
     public int getId() { return QId; }
 
 
-    /*public Question(String question, String qType, String qCanswer){
+    public Question(String question, String qType, String qCanswer){
         Question = question;
         QType = qType;
         QCanswer = qCanswer;
 
-    }*/
+    }
 
     public Question() {}
 }

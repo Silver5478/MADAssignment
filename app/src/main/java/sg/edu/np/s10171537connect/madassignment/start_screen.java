@@ -26,17 +26,16 @@ public class start_screen extends AppCompatActivity {
         DBHelper dbHandler = new DBHelper(this, null, 1);
 
         if (dbHandler.dbEmpty()) {
-            //dbHandler.addQuestion(TestQ);
+            dbHandler.addQuestion(TestQ);
             dbHandler.addQuestion(new Question("question", "answer", "type"));
             dbHandler.addQuestion(new Question("question", "answer", "type"));
             dbHandler.addQuestion(new Question("question", "answer", "type"));
             dbHandler.addQuestion(new Question("question", "answer", "type"));
             dbHandler.addQuestion(new Question("question", "answer", "type"));
 
-            //TextView textView = (TextView)findViewById(R.id.textView);
-           // textView.setText(dbHandler.findQuestion(TestQ.getQuestion()).getQuestion());
         }
-
+        TextView textView = (TextView)findViewById(R.id.textView);
+        textView.setText(dbHandler.getRandomQuestionByType("History").getQuestion());
     }
     public void on_start_game_click(View v){
         Intent in = new Intent(this, start_gameActivity.class);
