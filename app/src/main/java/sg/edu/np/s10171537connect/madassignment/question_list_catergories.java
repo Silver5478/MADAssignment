@@ -28,8 +28,8 @@ public class question_list_catergories extends AppCompatActivity {
     }
 
 
-    public void on_question_category_next_click(View v){
+    /*public void on_question_category_next_click(View v){
         Intent in = new Intent(this, question_select_onlinestatusActivity.class);
         startActivity(in);
-    }
+    }*/
 }

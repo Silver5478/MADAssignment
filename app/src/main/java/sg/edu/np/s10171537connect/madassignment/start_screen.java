@@ -31,11 +31,15 @@ public class start_screen extends AppCompatActivity {
             dbHandler.addQuestion(new Question("question", "type", "answer"));
 
         }
-        TextView textView = (TextView)findViewById(R.id.textView);
+        TextView textView = (TextView)findViewById(R.id.Title);
         textView.setText(dbHandler.getRandomQuestionByType("History").getQuestion());
     }
     public void on_start_game_click(View v){
         Intent in = new Intent(this, start_gameActivity.class);
+        startActivity(in);
+    }
+    public void on_cancel_click(View v){
+        Intent in = new Intent(this, start_screen.class);
         startActivity(in);
     }
 }

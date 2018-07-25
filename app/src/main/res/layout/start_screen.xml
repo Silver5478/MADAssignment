@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/database_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <Button
         android:id="@+id/database_button"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/startgame_button" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Title"
         android:layout_width="202dp"
         android:layout_height="143dp"
         android:layout_marginBottom="8dp"
