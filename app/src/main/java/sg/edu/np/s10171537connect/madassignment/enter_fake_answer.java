@@ -13,12 +13,16 @@ public class enter_fake_answer extends AppCompatActivity {
     int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DBHelper dbHandler = new DBHelper(this, null, 1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_enter_fake_answer);
+        Constant.question = dbHandler.getRandomQuestionByType(Constant.catergory);
+
         fanswer = findViewById(R.id.fake_answer);
         question = findViewById(R.id.display_question);
         question.setText(Constant.question.getQuestion());
         count = 1;
+
     }
     public void on_Fake_answer_next_click(View v){
         if(count == Constant.numPlayer ) {

@@ -12,10 +12,7 @@ public class start_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_screen);
-        Question TestQ = new Question();
-        TestQ.setQuestion("Which year did singapore obtain independence");
-        TestQ.setQType("History");
-        TestQ.setQCanswer("1965");
+
 
         Constant.AddData();
 //        Constant.PlayerList.get(0);
@@ -26,8 +23,7 @@ public class start_screen extends AppCompatActivity {
         DBHelper dbHandler = new DBHelper(this, null, 1);
 
         if (dbHandler.dbEmpty()) {
-            dbHandler.addQuestion(TestQ);
-            dbHandler.addQuestion(new Question("question", "type", "answer"));
+            dbHandler.addQuestion(new Question("Which year did singapore obtain independence", "History", "1965"));
             dbHandler.addQuestion(new Question("question", "type", "answer"));
             dbHandler.addQuestion(new Question("question", "type", "answer"));
             dbHandler.addQuestion(new Question("question", "type", "answer"));

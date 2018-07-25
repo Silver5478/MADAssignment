@@ -12,13 +12,14 @@ public class question_list_catergories extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DBHelper dbHandler = new DBHelper(this, null, 1);
         RecyclerView recyclerView;
-        ScoreTaskAdapter adapter;
+        CatTaskAdapter adapter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_question_catergories_question);
 
         recyclerView = findViewById(R.id.playerscore);
-        adapter = new ScoreTaskAdapter(this, /*Select * from cater*/);
+        adapter = new CatTaskAdapter(this, dbHandler.getListOfCategories());
         LinearLayoutManager mLayout =
                 new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayout);
