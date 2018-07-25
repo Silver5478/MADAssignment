@@ -11,10 +11,11 @@ import java.util.List;
 
 public class Enter_playername extends AppCompatActivity{
     EditText PlayerName;
-    int count;
+    int count = 1 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.enter_playername);
         TextView PN = findViewById(R.id.TVplayername);
         PN.setText("Enter player" + count + "'s name");
 
@@ -28,5 +29,7 @@ public class Enter_playername extends AppCompatActivity{
             startActivity(in);
         }
         count += 1;
+        TextView PN = findViewById(R.id.TVplayername);
+        PN.setText("Enter player" + count + "'s name");
     }
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class select_answer extends AppCompatActivity {
@@ -33,14 +34,18 @@ public class select_answer extends AppCompatActivity {
         answer5 = findViewById(R.id.answer5);
         answerList = Constant.QFanswerlist;
         answerList.add(Constant.question.getQCanswer());
+        List<TextView> TVList = new ArrayList<TextView>();
+        TVList.add(answer1);
+        TVList.add(answer2);
+        TVList.add(answer3);
+        TVList.add(answer4);
+        TVList.add(answer5);
+        for(int i=1; i<=Constant.numPlayer; i++)
+        {
+            TVList.get(i).setText((String) answerList.get(i-1));
+        }
 
 
-
-        answer1.setText((Integer) answerList.get(0));
-        answer2.setText((Integer) answerList.get(1));
-        answer3.setText((Integer) answerList.get(2));
-        answer4.setText((Integer) answerList.get(3));
-        answer5.setText((Integer) answerList.get(4));
     }
     public void on_select_answer1_click(View v){
         if(count == Constant.numPlayer ) {

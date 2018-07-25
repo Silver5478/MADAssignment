@@ -8,7 +8,7 @@ public class Constant {
     static boolean Online;
     static int numPlayer;
     static int numQuestion;
-    static List QFanswerlist;
+    static List QFanswerlist = new ArrayList();
     static Question question;
     static List<Player> PlayerList = new ArrayList<Player>();
     static String catergory;

@@ -27,7 +27,7 @@ public class enter_fake_answer extends AppCompatActivity {
     public void on_Fake_answer_next_click(View v){
         if(count == Constant.numPlayer ) {
             Constant.QFanswerlist.add(fanswer.getText().toString());
-            Intent in = new Intent(this, show_answer.class);
+            Intent in = new Intent(this, select_answer.class);
             startActivity(in);
         }
         count += 1;

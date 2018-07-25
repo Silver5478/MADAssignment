@@ -18,7 +18,7 @@ public class question_list_catergories extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_question_catergories_question);
 
-        recyclerView = findViewById(R.id.playerscore);
+        recyclerView = findViewById(R.id.RVcat);
         adapter = new CatTaskAdapter(this, dbHandler.getListOfCategories());
         LinearLayoutManager mLayout =
                 new LinearLayoutManager(this);
