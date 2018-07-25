@@ -51,6 +51,11 @@ public class show_answer extends AppCompatActivity {
             {
                 TextView ctv = TVList.get(i);
                 ctv.setBackgroundColor(0x1cc4a8);
+                Player p = Constant.PlayerList.get(i);
+                if (p.getSelectedAnswer() == QA)
+                {
+                    p.setPlayerScore(p.getPlayerScore() + 1);
+                }
             }
         }
     }
