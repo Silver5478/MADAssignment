@@ -18,10 +18,13 @@ public class show_answer extends AppCompatActivity {
     TextView answer5;
     List answerList;
     List<TextView> TVList;
+    TextView question;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_result);
+        question = findViewById(R.id.display_question);
+        question.setText(Constant.question.getQuestion());
         answer1 = findViewById(R.id.answer1);
         answer2 = findViewById(R.id.answer2);
         answer3 = findViewById(R.id.answer3);

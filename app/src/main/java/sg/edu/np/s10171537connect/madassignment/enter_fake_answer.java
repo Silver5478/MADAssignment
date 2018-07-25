@@ -5,15 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class enter_fake_answer extends AppCompatActivity {
     EditText fanswer;
+    TextView question;
     int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_enter_fake_answer);
         fanswer = findViewById(R.id.fake_answer);
+        question = findViewById(R.id.display_question);
+        question.setText(Constant.question.getQuestion());
         count = 1;
     }
     public void on_Fake_answer_next_click(View v){
