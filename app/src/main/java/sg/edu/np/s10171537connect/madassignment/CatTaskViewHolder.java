@@ -24,7 +24,7 @@ public class CatTaskViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 Constant.catergory = cat.getText().toString();
-                v.getContext().startActivity(new Intent(v.getContext(), question_select_onlinestatusActivity.class));
+                v.getContext().startActivity(new Intent(v.getContext(), select_number_of_playerActivity.class));
 
             }
         });
