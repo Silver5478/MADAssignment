@@ -23,4 +23,8 @@ public class question_select_onlinestatusActivity extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void on_cancel_click(View v) {
+        Intent in = new Intent(this, start_gameActivity.class);
+        startActivity(in);
+    }
 }
