@@ -29,4 +29,9 @@ public class select_number_of_playerActivity extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void on_cancel_click(View v){
+        Intent in = new Intent(this, question_list_catergories.class);
+        startActivity(in);
+    }
+
 }
