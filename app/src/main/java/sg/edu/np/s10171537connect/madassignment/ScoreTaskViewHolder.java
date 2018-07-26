@@ -15,7 +15,7 @@ public class ScoreTaskViewHolder extends RecyclerView.ViewHolder{
         super(v);
         view = v;
         name = v.findViewById(R.id.TVplayer_name);
-        score = v.findViewById(R.id.TVplayer_score);
+        score = v.findViewById(R.id.TVquestion_type);
     }
     public void setText_name(String s)
     {

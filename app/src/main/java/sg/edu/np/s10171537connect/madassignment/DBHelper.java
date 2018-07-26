@@ -118,6 +118,29 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return list;
     }
+    public List<Question> getListOfQuestions() {
+        List<Question> list = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_QUESTIONS, null);
+        Question q = new Question();
+        if (!cursor.moveToFirst())
+            return list;
+
+        q.setId(Integer.parseInt(cursor.getString(0)));
+        q.setQuestion(cursor.getString(1));
+        q.setQCanswer(cursor.getString(2));
+        q.setQType(cursor.getString(3));
+        list.add(q);
+        while (cursor.moveToNext()) {
+            q.setId(Integer.parseInt(cursor.getString(0)));
+            q.setQuestion(cursor.getString(1));
+            q.setQCanswer(cursor.getString(2));
+            q.setQType(cursor.getString(3));
+            list.add(q);
+        }
+
+        return list;
+    }
 
     public boolean deleteQuestion(int id) {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -29,7 +29,10 @@
         <activity android:name=".show_answer" />
         <activity android:name=".question_score" />
         <activity android:name=".Enter_question_custom" />
-        <activity android:name=".Enter_playername" /></application>
-
+        <activity android:name=".Enter_playername" />
+        <activity android:name=".Database_Create_question" />
+        <activity android:name=".Database_main" />
+        <activity android:name=".Database_delete"></activity>
+    </application>
 
 </manifest>
