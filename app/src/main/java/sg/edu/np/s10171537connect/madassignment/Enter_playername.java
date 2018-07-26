@@ -25,8 +25,15 @@ public class Enter_playername extends AppCompatActivity{
             Player p = Constant.PlayerList.get(0);
             EditText playertext = findViewById(R.id.TXplayername);
             p.setPlayerName(playertext.getText().toString());
+            playertext.setText("");
             Intent in = new Intent(this, question_ready.class);
             startActivity(in);
+        }
+        if(count <= Constant.numPlayer) {
+            Player p = Constant.PlayerList.get(0);
+            EditText playertext = findViewById(R.id.TXplayername);
+            p.setPlayerName(playertext.getText().toString());
+            playertext.setText("");
         }
         count += 1;
         TextView PN = findViewById(R.id.TVplayername);

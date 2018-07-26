@@ -33,21 +33,22 @@ public class show_answer extends AppCompatActivity {
         answer5 = findViewById(R.id.answer5);
         answerList = Constant.QFanswerlist;
         answerList.add(Constant.question.getQCanswer());
+
         TVList.add(answer1);
         TVList.add(answer2);
         TVList.add(answer3);
         TVList.add(answer4);
         TVList.add(answer5);
-        for(int i=1; i<=Constant.numPlayer; i++)
+        for(int i=0; i<5; i++)
         {
-            TVList.get(i).setText((String) answerList.get(i-1));
+            TVList.get(i).setText((String) answerList.get(i));
         }
 
 
         String QA = Constant.question.getQCanswer();
-        for(int i=1; i<=Constant.numPlayer; i++)
+        for(int i=0; i<Constant.numPlayer; i++)
             {
-            if(answerList.get(i-1) == QA)
+            if(answerList.get(i) == QA)
             {
                 TextView ctv = TVList.get(i);
                 ctv.setBackgroundColor(0x1cc4a8);
