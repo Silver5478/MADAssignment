@@ -20,10 +20,10 @@ public class Database_Create_question extends AppCompatActivity {
         t = findViewById(R.id.Enter_type);
         dbHandler = new DBHelper(this, null, 1);
     }
-    public void on_Fake_answer_next_click(View v){
+    public void on_submit_click(View v){
         if(q.getText() != null && t.getText() != null && ca.getText() != null) {
             dbHandler.addQuestion(new Question(q.getText().toString(), t.getText().toString(), ca.getText().toString()));
-            Intent in = new Intent(this, select_answer.class);
+            Intent in = new Intent(this, Database_main.class);
             startActivity(in);
         }
 
